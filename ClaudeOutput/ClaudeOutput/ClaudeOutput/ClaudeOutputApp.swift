@@ -11,7 +11,7 @@ import SwiftUI
 struct ClaudeOutputApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RollListView()
         }
     }
 }
