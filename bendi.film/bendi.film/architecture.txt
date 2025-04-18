@@ -1,0 +1,37 @@
+
+
+Reel = Roll
+Frame = Photo
+
+
+General Notes on Paradigm Used: MVVM - Model, View, ViewModel
+-------------------------------------------------------------
+1. Model: Only cares about holding and representing data
+2. View: Only cares about showing data on the screen (no business logic)
+3. ViewModel: Business logic - acts as intermediary between the models and views
+
+MVVM pattern:
+- Views observe the ViewModel usign @ObservedObject and @StateObject
+- The ViewModel publishes changes with @Published properties
+- UI state is kept in the views with @State properties
+- Data flows from ViewModel to Views
+- User actions flow from Views to ViewModel
+
+
+Architecture Breakdown for bendi.film
+-------------------------------------------------------------
+1. Model
+    - Roll struct: collection of Photos
+    - Photo struct: single frame with data properties like aperature and shutter speed
+
+2. View
+    - RollListView - shows list of all Rolls with Photos within them
+    - AddRollView - add a new Roll
+    - PhotoListView - shows list of all photos within a Roll
+    - AddPhotoView - add a new photo within a Roll
+    
+3. ViewModel
+    - RollViewModel
+        - marked with @ObservableObject to publish changes to UI
+        - contains business lgoci for adding/removing Rolls and Photos
+        - maintains the source of truth for the app's data
