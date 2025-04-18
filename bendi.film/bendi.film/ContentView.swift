@@ -27,7 +27,7 @@
 import SwiftUI
 
 // MARK: - Models
-struct Frame: Identifiable {
+struct Photo: Identifiable {
     var id = UUID()
     var aperture: String
     var shutterSpeed: String
@@ -35,54 +35,54 @@ struct Frame: Identifiable {
     var date: Date = Date()
 }
 
-struct Reel: Identifiable {
+struct Roll: Identifiable {
     var id = UUID()
     var name: String
-    var frames: [Frame] = []
+    var photos: [Photo] = []
     var createdAt: Date = Date()
 }
 
 // MARK: - View Models
-class ReelViewModel: ObservableObject {
-    @Published var reels: [Reel] = []
+class RollViewModel: ObservableObject {
+    @Published var rolls: [Roll] = []
     
-    func addReel(name: String) {
-        let newReel = Reel(name: name)
-        reels.append(newReel)
+    func addRoll(name: String) {
+        let newRoll = Roll(name: name)
+        rolls.append(newRoll)
     }
     
-    func deleteReel(at indexSet: IndexSet) {
-        reels.remove(atOffsets: indexSet)
+    func deleteRoll(at indexSet: IndexSet) {
+        rolls.remove(atOffsets: indexSet)
     }
     
-    func addFrame(to reel: Reel, aperture: String, shutterSpeed: String) {
-        if let index = reels.firstIndex(where: { $0.id == reel.id }) {
-            let newFrame = Frame(aperture: aperture, shutterSpeed: shutterSpeed)
-            reels[index].frames.append(newFrame)
+    func addPhoto(to roll: Roll, aperture: String, shutterSpeed: String) {
+        if let index = rolls.firstIndex(where: { $0.id == roll.id }) {
+            let newPhoto = Photo(aperture: aperture, shutterSpeed: shutterSpeed)
+            rolls[index].photos.append(newPhoto)
         }
     }
     
-    func deleteFrame(from reel: Reel, at indexSet: IndexSet) {
-        if let index = reels.firstIndex(where: { $0.id == reel.id }) {
-            reels[index].frames.remove(atOffsets: indexSet)
+    func deletePhoto(from roll: Roll, at indexSet: IndexSet) {
+        if let index = rolls.firstIndex(where: { $0.id == roll.id }) {
+            rolls[index].photos.remove(atOffsets: indexSet)
         }
     }
 }
 
 // MARK: - Views
-struct AddReelView: View {
+struct AddRollView: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var viewModel: ReelViewModel
-    @State private var reelName: String = ""
+    @ObservedObject var viewModel: RollViewModel
+    @State private var rollName: String = ""
     
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("Reel Details")) {
-                    TextField("Reel Name", text: $reelName)
+                Section(header: Text("Roll Details")) {
+                    TextField("Roll Name", text: $rollName)
                 }
             }
-            .navigationTitle("New Reel")
+            .navigationTitle("New Roll")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -92,22 +92,22 @@ struct AddReelView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
-                        if !reelName.isEmpty {
-                            viewModel.addReel(name: reelName)
+                        if !rollName.isEmpty {
+                            viewModel.addRoll(name: rollName)
                             dismiss()
                         }
                     }
-                    .disabled(reelName.isEmpty)
+                    .disabled(rollName.isEmpty)
                 }
             }
         }
     }
 }
 
-struct AddFrameView: View {
+struct AddPhotoView: View {
     @Environment(\.dismiss) private var dismiss
-    @ObservedObject var viewModel: ReelViewModel
-    var reel: Reel
+    @ObservedObject var viewModel: RollViewModel
+    var roll: Roll
     
     @State private var aperture: String = ""
     @State private var shutterSpeed: String = ""
@@ -129,7 +129,7 @@ struct AddFrameView: View {
                         .frame(minHeight: 100)
                 }
             }
-            .navigationTitle("New Frame")
+            .navigationTitle("New Photo")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -140,7 +140,7 @@ struct AddFrameView: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
                         if !aperture.isEmpty && !shutterSpeed.isEmpty {
-                            viewModel.addFrame(to: reel, aperture: aperture, shutterSpeed: shutterSpeed)
+                            viewModel.addPhoto(to: roll, aperture: aperture, shutterSpeed: shutterSpeed)
                             dismiss()
                         }
                     }
@@ -151,71 +151,71 @@ struct AddFrameView: View {
     }
 }
 
-struct FrameListView: View {
-    @ObservedObject var viewModel: ReelViewModel
-    var reel: Reel
-    @State private var showingAddFrame = false
+struct PhotoListView: View {
+    @ObservedObject var viewModel: RollViewModel
+    var roll: Roll
+    @State private var showingAddPhoto = false
     
     var body: some View {
         List {
-            ForEach(reel.frames) { frame in
+            ForEach(roll.photos) { photo in
                 VStack(alignment: .leading, spacing: 6) {
                     HStack {
-                        Text("Aperture: f/\(frame.aperture)")
+                        Text("Aperture: f/\(photo.aperture)")
                             .font(.headline)
                         Spacer()
-                        Text("Shutter: 1/\(frame.shutterSpeed)s")
+                        Text("Shutter: 1/\(photo.shutterSpeed)s")
                             .font(.headline)
                     }
                     
-                    if !frame.notes.isEmpty {
-                        Text(frame.notes)
+                    if !photo.notes.isEmpty {
+                        Text(photo.notes)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                     
-                    Text(frame.date, style: .date)
+                    Text(photo.date, style: .date)
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
                 .padding(.vertical, 4)
             }
             .onDelete { indexSet in
-                viewModel.deleteFrame(from: reel, at: indexSet)
+                viewModel.deletePhoto(from: roll, at: indexSet)
             }
         }
-        .navigationTitle(reel.name)
+        .navigationTitle(roll.name)
         .toolbar {
             Button {
-                showingAddFrame = true
+                showingAddPhoto = true
             } label: {
-                Label("Add Frame", systemImage: "plus")
+                Label("Add Photo", systemImage: "plus")
             }
         }
-        .sheet(isPresented: $showingAddFrame) {
-            AddFrameView(viewModel: viewModel, reel: reel)
+        .sheet(isPresented: $showingAddPhoto) {
+            AddPhotoView(viewModel: viewModel, roll: roll)
         }
     }
 }
 
-struct ReelListView: View {
-    @StateObject var viewModel = ReelViewModel()
-    @State private var showingAddReel = false
+struct RollListView: View {
+    @StateObject var viewModel = RollViewModel()
+    @State private var showingAddRoll = false
     
     var body: some View {
         NavigationStack {
             ZStack {
-                if viewModel.reels.isEmpty {
+                if viewModel.rolls.isEmpty {
                     VStack(spacing: 20) {
                         Image(systemName: "camera.fill")
                             .font(.system(size: 60))
                             .foregroundColor(.secondary)
-                        Text("No Reels")
+                        Text("No Rolls")
                             .font(.title2)
-                        Text("Tap the + button to add a new reel")
+                        Text("Tap the + button to add a new roll")
                             .foregroundColor(.secondary)
-                        Button("Add Your First Reel") {
-                            showingAddReel = true
+                        Button("Add Your First Roll") {
+                            showingAddRoll = true
                         }
                         .buttonStyle(.borderedProminent)
                         .padding(.top)
@@ -223,17 +223,17 @@ struct ReelListView: View {
                     .padding()
                 } else {
                     List {
-                        ForEach(viewModel.reels) { reel in
-                            NavigationLink(destination: FrameListView(viewModel: viewModel, reel: reel)) {
+                        ForEach(viewModel.rolls) { roll in
+                            NavigationLink(destination: PhotoListView(viewModel: viewModel, roll: roll)) {
                                 VStack(alignment: .leading) {
-                                    Text(reel.name)
+                                    Text(roll.name)
                                         .font(.headline)
                                     HStack {
-                                        Text("\(reel.frames.count) frames")
+                                        Text("\(roll.photos.count) photos")
                                             .font(.subheadline)
                                             .foregroundColor(.secondary)
                                         Spacer()
-                                        Text(reel.createdAt, style: .date)
+                                        Text(roll.createdAt, style: .date)
                                             .font(.caption)
                                             .foregroundColor(.secondary)
                                     }
@@ -242,32 +242,32 @@ struct ReelListView: View {
                             }
                         }
                         .onDelete { indexSet in
-                            viewModel.deleteReel(at: indexSet)
+                            viewModel.deleteRoll(at: indexSet)
                         }
                     }
                 }
             }
-            .navigationTitle("Camera Reels")
+            .navigationTitle("Camera Rolls")
             .toolbar {
                 Button {
-                    showingAddReel = true
+                    showingAddRoll = true
                 } label: {
-                    Label("Add Reel", systemImage: "plus")
+                    Label("Add Roll", systemImage: "plus")
                 }
             }
-            .sheet(isPresented: $showingAddReel) {
-                AddReelView(viewModel: viewModel)
+            .sheet(isPresented: $showingAddRoll) {
+                AddRollView(viewModel: viewModel)
             }
         }
     }
 }
 
-// MARK: - App Entry Point
+//// MARK: - App Entry Point
 //@main
-//struct CameraReelApp: App {
+//struct CameraRollApp: App {
 //    var body: some Scene {
 //        WindowGroup {
-//            ReelListView()
+//            RollListView()
 //        }
 //    }
 //}

@@ -18,6 +18,12 @@ MVVM pattern:
 - User actions flow from Views to ViewModel
 
 
+
+
+
+
+
+
 Architecture Breakdown for bendi.film
 -------------------------------------------------------------
 1. Model
