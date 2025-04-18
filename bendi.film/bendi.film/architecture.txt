@@ -18,12 +18,6 @@ MVVM pattern:
 - User actions flow from Views to ViewModel
 
 
-
-
-
-
-
-
 Architecture Breakdown for bendi.film
 -------------------------------------------------------------
 1. Model
@@ -41,3 +35,11 @@ Architecture Breakdown for bendi.film
         - marked with @ObservableObject to publish changes to UI
         - contains business lgoci for adding/removing Rolls and Photos
         - maintains the source of truth for the app's data
+
+
+
+Development Steps I took
+-------------------------------------------------------------
+1. Model
+2. View Model
+3. Views

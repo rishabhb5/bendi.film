@@ -8,4 +8,7 @@
 import Foundation
 import SwiftUI
 
-
+class RollViewModel: ObservableObject {
+    
+    @Published var rolls: [Roll] = []
+}
