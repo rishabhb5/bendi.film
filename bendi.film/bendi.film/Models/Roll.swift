@@ -7,7 +7,11 @@
 
 import Foundation
 
-// A Roll of film - all data associated with a Roll including Photos inside
+/*
+ - Roll Object
+ - A Roll of film - all data associated with a Roll including Photos inside
+ - Roll needs to subscribe to Identifiable to use unique identifier: UUID
+ */
 struct Roll: Identifiable {
     var id = UUID()                 // unique identifier
     var memoryName: String          // name of the memory

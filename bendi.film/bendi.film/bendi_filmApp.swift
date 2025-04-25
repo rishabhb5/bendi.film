@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+/*
+ - Entry Point
+ */
 @main
 struct bendi_filmApp: App {
     var body: some Scene {
         WindowGroup {
-            RollListView()
+            RollListView()  // Main View
         }
     }
 }
