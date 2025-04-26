@@ -48,3 +48,6 @@ Development Steps I took
 
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
+https://stackoverflow.com/questions/1338728/how-do-i-delete-a-commit-from-a-branch
+git reset --hard HEAD~1
+
