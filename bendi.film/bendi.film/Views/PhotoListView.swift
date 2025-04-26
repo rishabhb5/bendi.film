@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct PhotoListView: View {
+    @ObservedObject var rollViewModel: RollViewModel
+    var roll: Roll
+    @State private var showingAddPhoto = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
+    
 }
 
-#Preview {
-    PhotoListView()
-}
+//#Preview {
+//    PhotoListView(rollViewModel: RollViewModel, roll: Roll)
+//}

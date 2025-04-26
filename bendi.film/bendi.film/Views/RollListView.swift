@@ -43,7 +43,7 @@ struct RollListView: View {
                 else {
                     List {
                         ForEach(rollViewModel.rolls) { roll in
-                            NavigationLink(destination: PhotoListView(viewModel: viewModel, roll)) {
+                            NavigationLink(destination: PhotoListView(rollViewModel: rollViewModel, roll: roll)) {
                                 
                             }
                             

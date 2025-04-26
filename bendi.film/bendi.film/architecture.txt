@@ -51,3 +51,6 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 https://stackoverflow.com/questions/1338728/how-do-i-delete-a-commit-from-a-branch
 git reset --hard HEAD~1
 
+Build a SwiftUI App with Claude AI
+https://www.youtube.com/watch?v=hSSxuO6GdcE
+
