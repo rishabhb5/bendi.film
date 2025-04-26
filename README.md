@@ -1,12 +1,13 @@
 # bendi.film - ("bendy film")
 
 ## Story:
-I tried out film photography 1 year of using a digital Fujifilm X-E4 camera.
+I tried out film photography 1 year after using a digital Fujifilm X-E4 camera.
 
 After seeing the scanned film I was happy with some of the pictures but the first thing I realized was:
 - I don't know what aperture and shutter speed settings I used. I had come to rely on the settings that were saved with digital photos.
 
-## Problem/inconvenience I was facing:
+I would 
+How could I set up the feedback loop
 
 The first thing I realized was 
 Keep track of the camera settings used to take pictures taken with a film camera.
