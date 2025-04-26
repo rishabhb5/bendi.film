@@ -7,6 +7,7 @@
 - Digital Camera Settings Saved in the JPG file:
 - Business Logic:
 - Initial FigJam UI Flow/Mockup w/ Business Logic:
+- Product Roadmap: Looking ahead - future features
 
 
 ## To Add:
@@ -34,5 +35,7 @@ Users can quickly save aperature and shutter speed information for the picture t
 ![bendi film_UI](https://github.com/user-attachments/assets/8f4b63b7-7e52-45b9-9458-26258eb8b2d5)
 
 
-
+## Product Roadmap: Looking ahead - future features
+- Add Photos to the app
+- Export a Roll as a txt, excel, png so it can be stored in a lightweight fashion
 
