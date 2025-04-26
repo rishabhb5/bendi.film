@@ -20,6 +20,8 @@ I tried out film photography 1 year after using a digital Fujifilm X-E4 camera.
 After seeing the scanned film I was happy with some of the pictures but the first thing I realized was:
 - I don't know what aperture and shutter speed settings I used. I had come to rely on the settings that were saved with digital photos.
 
+Because you cannot see the picture right away - it is more important to understand what settings you used since each shot costs money and is more deliberate.
+
 ## Camera Feedback Loop:
 ![FeedbackLoop](https://github.com/user-attachments/assets/4920e6d8-f51a-414f-9f6b-d9d4dc64b6aa)
 
