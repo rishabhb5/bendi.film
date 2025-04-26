@@ -10,6 +10,7 @@ After seeing the scanned film I was happy with some of the pictures but the firs
 I would 
 
 ![FeedbackLoop](https://github.com/user-attachments/assets/4920e6d8-f51a-414f-9f6b-d9d4dc64b6aa)
+<img width="1108" alt="DigitalPhotoSettings" src="https://github.com/user-attachments/assets/a3741817-92d4-4a2b-86a4-2be3d2c47dec" />
 
 
 
