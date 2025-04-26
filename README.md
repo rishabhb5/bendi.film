@@ -1,5 +1,14 @@
 # bendi.film ("bendy film") - Film Camera Settings Rracker
 
+## Contents:
+- To Add
+- Story
+- Camera Feedback Loop
+- Digital Camera Settings Saved in the JPG file:
+- Business Logic:
+- Initial FigJam UI Flow/Mockup w/ Business Logic:
+
+
 ## To Add:
 - App Screenshots
 - Quick Video going through functionality
