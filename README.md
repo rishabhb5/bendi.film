@@ -1,6 +1,6 @@
 # bendi.film ("bendy film") - Film Camera Settings Rracker
 
-## To Do:
+## To Add:
 - App Screenshots
 - Quick Video going through functionality
 
