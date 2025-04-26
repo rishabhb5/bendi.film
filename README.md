@@ -1,4 +1,4 @@
-# bendi.film ("bendy film") - Film Camera Settings Rracker
+# bendi.film - ("bendy film") - Film Camera Settings Tracker
 
 ## Contents:
 - To Add
