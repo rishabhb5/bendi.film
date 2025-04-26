@@ -9,7 +9,9 @@ After seeing the scanned film I was happy with some of the pictures but the firs
 
 I would 
 
-<img width="1108" alt="DigitalPhotoSettings" src="https://github.com/user-attachments/assets/5865fed6-0ea3-4b42-a3c1-7b6406c55c42" />
+![bendi film (1)](https://github.com/user-attachments/assets/0e0aade6-60c7-470b-8e92-d466d8548e63)
+
+
 
 How could I set up the feedback loop
 
