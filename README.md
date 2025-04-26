@@ -1,4 +1,4 @@
-# bendi.film ("bendy film") - film settings tracker
+# bendi.film ("bendy film") - Film Camera Settings Rracker
 
 ## Story:
 I tried out film photography 1 year after using a digital Fujifilm X-E4 camera.
