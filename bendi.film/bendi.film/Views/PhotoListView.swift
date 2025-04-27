@@ -5,6 +5,12 @@
 //  Created by rishabh b on 4/25/25.
 //
 
+/*
+ - 20250426: Understanding concept of manipulating a data structure (in this case the rolls array)
+ - displaying the array in a List -> ForEach structure in the Views
+ */
+
+
 import SwiftUI
 
 struct PhotoListView: View {
@@ -13,7 +19,13 @@ struct PhotoListView: View {
     @State private var showingAddPhoto = false
     
     var body: some View {
-        
+        List {
+            ForEach(roll.photos) { photo in
+                VStack(alignment: .leading, spacing: 6) {
+                    
+                }
+            }
+        }
     }
     
 }
