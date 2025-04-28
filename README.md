@@ -22,7 +22,7 @@ After seeing the scanned film I was happy with some of the pictures but the firs
 
 Because you cannot see the picture right away - it is more important to understand what settings you used since each shot costs money and is more deliberate.
 
-## Camera Feedback Loop:
+## Digital Camera Feedback Loop:
 ![FeedbackLoop](https://github.com/user-attachments/assets/4920e6d8-f51a-414f-9f6b-d9d4dc64b6aa)
 
 ## Digital Camera Settings Saved in the JPG file:
