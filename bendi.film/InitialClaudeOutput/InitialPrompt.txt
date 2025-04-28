@@ -1,0 +1,4 @@
+
+Initial Prompt:
+
+I want to make an iOS app in SwiftUI where users can add new reels (buttons) - when the user taps a reel, theres another window where they can add new frames - the user would need to input the aperature and shutter speed
