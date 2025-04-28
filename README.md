@@ -1,4 +1,4 @@
-# bendi.film - ("bendy film") - Film Camera Settings Tracker
+# bendi.film - ("bendy film") -> exposure tracker for film cameras
 
 ## Contents:
 - To Add
