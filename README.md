@@ -13,6 +13,7 @@
 ## To Add:
 - App Screenshots
 - Quick Video going through functionality
+- Film Photography flow to show the difference
 
 ## Story:
 I tried out film photography 1 year after using a digital Fujifilm X-E4 camera.
@@ -40,4 +41,5 @@ Users can quickly save aperature and shutter speed information for the picture t
 ## Product Roadmap: Looking ahead - future features
 - Add Photos to the app
 - Export a Roll as a txt, excel, png so it can be stored in a lightweight fashion
+- AI features
 
