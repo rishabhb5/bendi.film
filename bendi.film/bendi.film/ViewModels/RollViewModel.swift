@@ -19,7 +19,7 @@ class RollViewModel: ObservableObject {
     @Published var rolls: [Roll] = []
     
     // this function adds a new Roll to rolls[]
-    func addRoll(inputMemoryName: String, inputRollNameIso: String) {
+    func addNewRoll(inputMemoryName: String, inputRollNameIso: String) {
         let newRoll = Roll(memoryName: inputMemoryName, rollNameIso: inputRollNameIso)
         rolls.append(newRoll)
     }
