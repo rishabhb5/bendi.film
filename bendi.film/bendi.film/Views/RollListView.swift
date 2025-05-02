@@ -18,8 +18,9 @@ struct RollListView: View {
     var body: some View {
         NavigationStack {
     
-            // Applying all
+            // Applying all modifiers like the Tool Bar (+ Button to add new Rolls)
             ZStack {
+                
                 // if there are No Rolls
                 if rollViewModel.rolls.isEmpty {
                     VStack(spacing: 20) {
@@ -32,27 +33,35 @@ struct RollListView: View {
                         
                         Text("Tap the + button to add a new Roll")
                             .foregroundColor(.secondary)
-                    } //VSTACK
+                    } /*VSTACK*/
                     .padding()
                 }
+                
                 // Show the List of Rolls
                 else {
                     List {
                         ForEach(rollViewModel.rolls) { roll in
-                            //NavigationLink(destination: PhotoListView(rollViewModel: rollViewModel, roll: roll)) {
-                            //}
-                            
-                            HStack {
-                                Text(roll.memoryName)
-                                Text(roll.rollNameIso)
-                            }
-                            
+                            NavigationLink(destination: PhotoListView(rollViewModel: rollViewModel, roll: roll)) {
+                                VStack(alignment: .leading) {
+                                    HStack {
+                                        Text(roll.memoryName)
+                                        Text(roll.rollNameIso)
+                                        Text(roll.createdAt, style: .date)
+                                    }
+                                } /*VSTACK*/
+                            } /*NAVIGATIONLINK*/
+                        } /*FOREACH within LIST*/
+                        .onDelete { index in
+                            rollViewModel.deleteRoll(at: index)
                         }
-                    }
+                    } /*LIST*/
                 }
-            } //ZSTACK
+            } /*ZSTACK*/
             .navigationTitle("Camera Rolls")
+            
+            // Tool Bar
             .toolbar {
+                // + Button
                 Button {
                     // this part is the Button's action closure - when a user taps, then this portion of the code is run which changes the state of showingAddRoll
                     // when showingAddRoll's state changes to true -> SwiftUI automatically triggers the AddNewRoll sheet
@@ -64,9 +73,9 @@ struct RollListView: View {
                     AddNewRollView(rollViewModel: rollViewModel)
                 }
             }
-        } //NAVIGATIONSTACK
-    }
-}
+        } /*NAVIGATIONSTACK*/
+    } /*BODY*/
+} /*VIEW*/
 
 #Preview {
     RollListView()

@@ -24,8 +24,13 @@ class RollViewModel: ObservableObject {
         rolls.append(newRoll)
     }
     
-//    func deleteRoll
-//    
+    func deleteRoll(at index: IndexSet) {
+        rolls.remove(atOffsets: index)
+    }
+    
+    
+    
+    
 //    func addPhoto
 //    
 //    func deletePhoto

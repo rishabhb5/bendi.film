@@ -20,14 +20,16 @@ struct AddNewRollView: View {
     var body: some View {
         
         NavigationStack {
+            // Form
             Form {
                 Section(header: Text("Roll Details")) {
                     TextField("Memory Name", text: $inputMemoryName)
                     TextField("Roll Name / Iso", text: $inputRollNameIso)
                 }
-            }
+            }   /*FORM*/
             .navigationTitle("New Roll")
             .navigationBarTitleDisplayMode(.inline)
+            // Tool Bar
             .toolbar {
                 // Cancel Button
                 ToolbarItem(placement: .cancellationAction) {
@@ -40,17 +42,17 @@ struct AddNewRollView: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
                         if !inputMemoryName.isEmpty && !inputRollNameIso.isEmpty {
+                            // addNewRoll()
                             rollViewModel.addNewRoll(inputMemoryName: inputMemoryName, inputRollNameIso: inputRollNameIso)
                             dismiss()
                         }
                     }
                     // Save button disabled if no input
-                    .disabled(inputMemoryName.isEmpty &&
-                    inputMemoryName.isEmpty)
+                    .disabled(inputMemoryName.isEmpty && inputMemoryName.isEmpty)
                 }
             }
-        }   //NAVIGATIONSTACK
-    }   //VIEW
+        }   /*NAVIGATIONSTACK*/
+    }   /*VIEW*/
 }
 
 #Preview {
