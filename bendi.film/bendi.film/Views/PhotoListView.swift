@@ -27,13 +27,30 @@ struct PhotoListView: View {
         List {
             ForEach(roll.photos) { photo in
                 VStack(alignment: .leading, spacing: 6) {
+                    HStack {
+                        // Add the Index for the photo array
+                        // Text
+                        
+                        Text("Aperture: f/\(photo.aperture)")
+                            .font(.headline)
+                       
+                        Spacer()
+                        
+                        Text("Shutter: 1/\(photo.shutterSpeed)s")
+                            .font(.headline)
+                    } /*HSTACK*/
                     
-                }
-            }
-        }
-    }
-    
-}
+                    if !photo.notes.isEmpty {
+                        Text(photo.notes)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                    
+                } /*VSTACK*/
+            } /*FOREACH*/
+        } /*LIST*/
+    } /*BODY*/
+} /*VIEW*/
 
 //#Preview {
 //    PhotoListView(rollViewModel: RollViewModel, roll: Roll)

@@ -29,11 +29,9 @@ class RollViewModel: ObservableObject {
     }
     
     
+    // func addPhoto
     
-    
-//    func addPhoto
-//    
-//    func deletePhoto
+    // func deletePhoto
     
     
     

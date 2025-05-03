@@ -41,6 +41,7 @@ struct RollListView: View {
                 else {
                     List {
                         ForEach(rollViewModel.rolls) { roll in
+                            // Passing in rollwViewModel and the current roll
                             NavigationLink(destination: PhotoListView(rollViewModel: rollViewModel, roll: roll)) {
                                 VStack(alignment: .leading) {
                                     HStack {
@@ -51,6 +52,7 @@ struct RollListView: View {
                                 } /*VSTACK*/
                             } /*NAVIGATIONLINK*/
                         } /*FOREACH within LIST*/
+                        // Delete Rolls
                         .onDelete { index in
                             rollViewModel.deleteRoll(at: index)
                         }
