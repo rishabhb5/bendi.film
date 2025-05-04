@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EE84D3EB-CEBD-4FF8-91B2-F6269E352514"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bendi.film/ViewModels/RollViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "RollViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - a5a7435111b10f53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of bendi_film.RollViewModel.rolls : Swift.Array&lt;bendi_film.Roll&gt;"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/bendi.film/ViewModels/RollViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - aec2d8c686295a6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.rolls.getter : Swift.Array&lt;bendi_film.Roll&gt;"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/bendi.film/ViewModels/RollViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - e1f04ddae015eb23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.rolls.setter : Swift.Array&lt;bendi_film.Roll&gt;"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/bendi.film/ViewModels/RollViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - 13c2fab551a43620"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.rolls.modify : Swift.Array&lt;bendi_film.Roll&gt;"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/bendi.film/ViewModels/RollViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - 9a3156e6bfa06572"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.$rolls.getter : Combine.Published&lt;Swift.Array&lt;bendi_film.Roll&gt;&gt;.Publisher"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/bendi.film/ViewModels/RollViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - 7f37ed966d81182a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.$rolls.setter : Combine.Published&lt;Swift.Array&lt;bendi_film.Roll&gt;&gt;.Publisher"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/%3Cstdin%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4D555C97-FBBA-42FB-ACF6-32F8A6F7C8D7 - cf7da3912555e859"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bendi_film.RollViewModel.$rolls.modify : Combine.Published&lt;Swift.Array&lt;bendi_film.Roll&gt;&gt;.Publisher"
+                  moduleName = "bendi.film.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rishabh/Desktop/2025_iOS/bendi.film/bendi.film/%3Cstdin%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
